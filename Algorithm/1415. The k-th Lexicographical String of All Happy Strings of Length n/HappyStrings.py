@@ -30,4 +30,4 @@ class Solution:
             return ''
         return l[k-1]
     
-    
+    # O(n)
