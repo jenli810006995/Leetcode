@@ -28,5 +28,9 @@ public:
 };
 
 
+# Time Complexity: O(logk)
+# Space Compexity: O(1)
+
+
 
 
