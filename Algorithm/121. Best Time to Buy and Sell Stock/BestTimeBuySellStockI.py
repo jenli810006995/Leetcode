@@ -46,9 +46,9 @@ class Solution:
         
         for i in range(1, N):
             mins[i] = min(mins[i-1], prices[i])
-            maxs[N - 1] = prices[N - 1]
-            for j in range(N - 2, -1, -1):
-                maxs[j] = max(maxs[j + 1], prices[j])
+        maxs[N - 1] = prices[N - 1]
+        for j in range(N - 2, -1, -1):
+            maxs[j] = max(maxs[j + 1], prices[j])
         return max(maxs[i] - mins[i] for i in range(N))
     
     
