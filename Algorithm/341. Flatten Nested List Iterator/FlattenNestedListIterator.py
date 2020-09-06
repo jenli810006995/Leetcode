@@ -46,3 +46,28 @@ class NestedIterator:
 # Your NestedIterator object will be instantiated and called as such:
 # i, v = NestedIterator(nestedList), []
 # while i.hasNext(): v.append(i.next())
+
+# Time: 9/6/2020
+
+class NestedIterator:
+    def __init__(self, nestedList: [NestedInteger]):
+        self.array = []
+        def fill(nl):
+            for ni in nl:
+                if ni.isInteger():
+                    self.array.append(ni.getInteger())
+                else:
+                    fill(ni.getList())
+        fill(nestedList)
+        self.index = 0
+        
+    def next(self) -> int:
+        i = self.index
+        self.index += 1
+        return self.array[i]
+       
+    def hasNext(self) -> bool:
+        return self.index < len(self.array)
+
+## Link: https://leetcode.com/problems/flatten-nested-list-iterator/
+## Reference: http://sdytlm.github.io/blog/2016/08/12/leetcode-flatten-nested-list-iterator/
