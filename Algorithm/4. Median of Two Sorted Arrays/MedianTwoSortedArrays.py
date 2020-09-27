@@ -14,7 +14,7 @@ class Solution():
             
         else:
             n = (len(nums1) //2) + 1
-            return nums[n - 1]
+            return nums1[n - 1]
             
  ## Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
  ## Reference: https://learndataanalysis.org/4-median-of-two-sorted-arrays-leetcode-answers-python/           
