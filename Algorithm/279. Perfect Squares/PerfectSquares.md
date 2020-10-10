@@ -19,7 +19,7 @@ Solution
 
 ```
 class Solution:
-    def numSquare(self, n: int) ->int
+    def numSquares(self, n: int) ->int:
         squares = [i**2 for i in range(1, int(n**0.5)+1)]
         dp = [1]*(n + 1)
         dp[0] = 0
