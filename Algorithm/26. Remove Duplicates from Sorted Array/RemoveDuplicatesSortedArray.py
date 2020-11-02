@@ -26,3 +26,45 @@ class Solution:
       
 ## Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 ## Reference: https://medium.com/leetcode-cracker/26-remove-duplicates-from-sorted-array-19e2de4ca555
+
+
+# Time: 11/1/2020
+# JS
+
+var removeDuplicates = function(nums){
+    
+    var head = 0;
+    
+    for (let i = 1; i < nums.length; i ++){
+    
+        if (nums[i] !== nums[head]){
+            head ++;
+            nums[head] = nums[i];
+            }
+    }
+    
+    return head + 1;
+}
+
+# Python
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        
+        if not nums:
+            return 0
+        
+        head = 0
+        
+        for i in range(1, len(nums)):
+            if nums[i] != nums[head]:
+                head +=1
+                nums[head] = nums[i]
+        
+        return head + 1
+
+# Reference: https://youtu.be/xwZ8TFMLy8I
