@@ -35,3 +35,24 @@ class Solution:
         for j in range(i, len(nums)):
             nums[j] = 0
             
+            
+ # Time: 11/5/2020
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        
+        n = len(nums)
+        count = 0
+        
+        for i in range(n):
+            if nums[i] != 0:
+                nums[count] = nums[i] # move all the non-zero elements to the front
+                count += 1
+                
+        while count < n:
+            nums[count] = 0
+            count += 1
+        return nums
+    
+# Reference: https://www.geeksforgeeks.org/move-zeroes-end-array/
+    
