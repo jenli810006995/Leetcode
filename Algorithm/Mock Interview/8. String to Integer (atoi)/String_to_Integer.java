@@ -17,7 +17,7 @@ class Solution{
      
     // check if optional sign exists
     if (i < str.length() && (str.charAt(i) == '+' || str.charAt(i) == '-'))
-        sign = (str.charAt(i ++) == 1) ? -1 : 1;
+        sign = (str.charAt(i ++) == '-') ? -1 : 1;
     
     // build result and check for overflow/underflow
     
